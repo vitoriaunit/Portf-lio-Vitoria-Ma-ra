@@ -1,0 +1,192 @@
+/* Header principal */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background: #4A3252;
+  min-height: 480px;
+  width: 100vw;
+  margin: 0;
+  border-radius: 0;
+  position: relative;
+  top: 0;
+  flex-wrap: wrap;
+  padding-top: 48px; /* Adicione esta linha */
+}
+
+/* Container interno */
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 64px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+/* Lado esquerdo */
+.header__left {
+  max-width: 62rem;
+  flex: 1;
+}
+.header__left p {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  max-width: 50rem;
+  color: #fff;
+}
+
+/* Lado direito */
+.header__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.header__right h1,
+.header__right p {
+  color: #fff;
+}
+.header__right p {
+  font-size: 1.3rem;
+}
+
+/* Imagem do perfil */
+.header__image {
+  position: relative;
+  line-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 260px;
+  margin: 32px auto 0 auto; /* Adiciona espaço no topo */
+  z-index: 1;
+}
+.header__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #fff;
+  display: block;
+}
+
+/* Borda atrás da imagem */
+.header__image::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #4A3252;
+  position: absolute;
+  top: -1.5rem;
+  right: -1.5rem;
+  border-radius: 0.5rem;
+  z-index: -1;
+}
+
+/* Redes sociais */
+.social-list {
+  display: flex;
+  gap: 24px;
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  margin: 0;
+  padding: 0 60px 0 0;
+  list-style: none;
+}
+.social-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.social-list li a img {
+  width: 2.2em;
+  height: 2.2em;
+  min-width: 28px;
+  min-height: 28px;
+  max-width: 40px;
+  max-height: 40px;
+  filter: brightness(0);
+  transition: transform 0.2s, filter 0.2s;
+}
+.social-list li a:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  background: #FFB800;
+}
+.social-list li a:hover img {
+  filter: brightness(0.2) sepia(1) hue-rotate(250deg) saturate(2);
+  transform: scale(1.1);
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  header,
+  .header__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    min-height: unset;
+    width: 100vw;
+    padding-top: 32px;
+    padding-bottom: 48px; /* Adiciona espaço extra abaixo no mobile */
+  }
+  .header__left,
+  .header__right {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__image {
+    width: 180px;
+    height: 180px;
+    margin: 32px auto 0 auto;
+  }
+  .header__image img {
+    width: 180px;
+    height: 180px;
+  }
+  .social-list {
+    position: static;
+    justify-content: center;
+    padding: 0;
+    margin-top: 24px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  header,
+  .header__container {
+    gap: 18px;
+    padding: 24px 8px 0 8px;
+    padding-bottom: 56px; /* Mais espaço extra abaixo no mobile pequeno */
+  }
+  .header__image {
+    width: 120px;
+    height: 120px;
+    margin: 32px auto 0 auto;
+  }
+  .header__image img {
+    width: 120px;
+    height: 120px;
+  }
+  .main-title {
+    font-size: 2rem;
+  }
+}
