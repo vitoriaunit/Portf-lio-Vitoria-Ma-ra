@@ -5,25 +5,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title> Maíra Ribeiro Portfólio </title>
+  <title> Maíra Ribeiro Portfólio </title>  
   
   <link rel="stylesheet" href="css/extends.css">
   <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/navbar.css">
+  <link rel="icon" href="assets/iconfinder-webbrowseronlaptop-4417111_116624.svg">
+
+  
 <!--Fonte-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
   
 
 </head>
 <body style="font-family: 'Poppins', sans-serif;">
 
   <!-- Nav Bar -->
-   <nav class="navbar">
+   <!-- <nav class="navbar">
     <div class="navbar__content">
       <ul class="navbar__links">
         <li><a href="#header">Início</a></li>
         <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#footer">Contato</a></li>
       </ul>
@@ -31,7 +37,42 @@
         Entre em contato
       </a>
     </div>
-   </nav>
+   </nav> -->
+
+
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid justify-content-center">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#header">Início</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#about">Sobre</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfólio</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#skills">Skills</a>
+        </li>
+
+        <li class="nav-item">
+          <a  class="nav-link" aria-current="page"href="#footer">Contato</a>
+        </li>
+
+      </ul>
+     
+    </div>
+  </div>
+</nav>
 
    <!--header-->
 <header id="header">
@@ -75,49 +116,180 @@
 </section>"
 
   
-<!--Portfólio-->
+<!--Portfolio-->
 <section id="portfolio" class="portfolio-section">
-  <h2 class="portfolio-title">Portfólio</h2>
-  <div class="portfolio-grid">
-
-    <div class="portfolio-card">
-      <div class="portfolio-card-content">
-        <span class="portfolio-label">HTML, CSS</span>
-        <h3 class="portfolio-project-title">Site Ciência e Tech</h3>
-        <p class="portfolio-desc">
-          Trabalho de front-end na UNIT. O site propõe a criação de uma matéria que exemplifica notícias recentes de ciências.
-        </p>
-        <a href="https://github.com/vitoriaunit/trabalho.git" class="portfolio-btn" target="_blank" rel="noopener">Acesse aqui &gt;</a>
+<section class="pt-5 pb-5 portfolio-section" style="background: #4A3252;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3 class="mb-3 text-white text-center portfolio-title">Portfólio</h3>
       </div>
-      <img src="assets/cienciaetech.png" alt="Site Ciência e Tech" class="portfolio-img">
-    </div>
+      <div class="col-12 position-relative">
+        <!-- Botões fora do carrossel, alinhados nas laterais (fundo azul/btn-primary) -->
+        <button class="btn btn-primary position-absolute top-50 start-0 translate-middle-y" style="z-index:2; left:-40px;" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="btn btn-primary position-absolute top-50 end-0 translate-middle-y" style="z-index:2; right:-40px;" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+        <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+               
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" alt="Projeto 1" src="assets/cienciaetech.png">
+                    <div class="card-body">
+                      <span class="portfolio-label tech-label mb-2">HTML, CSS e JavaScript</span>
+                      <h4 class="card-title">Site Ciência e Tech</h4>
+                      <p class="card-text">Trabalho de front-end na UNIT. O site propõe a criação de uma matéria que exemplifica notícias recentes de ciências.</p>
+                      <a href="https://trabalho-unit.vercel.app/" class="portfolio-btn btn btn-primary" target="_blank" rel="noopener">Acesse o projeto</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 2 -->
+                
+                <div class="col-md-4 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" alt="Projeto 2" src="assets/SVO.png">
+                    <div class="card-body">
+                      <span class="portfolio-label tech-label mb-2">HTML, CSS e JavaScript</span>
+                      <h4 class="card-title">Site SVO - Fundação Parreiras Horta</h4>
+                      <p class="card-text">Projeto desenvolvido para o Serviço de Verificação de Óbito (SVO). Página responsiva e intuitiva para o profissional e usuário.</p>
+                      <a href="https://github.com/UNIT-Residencia-1-Squad-10/SVO.git" class="portfolio-btn btn btn-primary" target="_blank" rel="noopener">Acesse o projeto</a>
+                    </div>
+                  </div>
+                </div>
+               
+                <!-- Card 3 -->
+                <div class="col-md-4 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" alt="Projeto 3" src="assets/API.png">
+                    <div class="card-body">
+                      <span class="portfolio-label tech-label mb-2">C# e .NET</span>
+                      <h4 class="card-title">API de registro de clientes</h4>
+                      <p class="card-text">Criação de uma API de registro de clientes, produtos e utilizando métodos GET, POST, DELETE e UPDATE com Entity Framework.</p>
+                      <a href="https://github.com/vitoriaunit/ProductClientHub.git" class="portfolio-btn btn btn-primary" target="_blank" rel="noopener">Acesse o projeto</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Próximo slide -->
+            <div class="carousel-item">
+              <div class="row">
+                <!-- Card 4 -->
+                <div class="col-md-4 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" alt="Projeto 4" src="assets/Lampada.png">
+                    <div class="card-body">
+                      <span class="portfolio-label tech-label mb-2">HTML, CSS e JavaScript</span>
+                      <h4 class="card-title">Projeto Lâmpada</h4>
+                      <p class="card-text">Uma página simples que simula o efeito de acender e apagar uma lâmpada. Ao clicar na imagem, a interface alterna entre modo claro e escuro utilizando JavaScript para manipular o DOM e classes CSS.</p>
+                      <a href="https://lampada-projeto.vercel.app/" class="portfolio-btn btn btn-primary" target="_blank" rel="noopener">Acesse o projeto</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-md-4 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" alt="Projeto 5" src="assets/calculadora.png">
+                    <div class="card-body">
+                      <span class="portfolio-label tech-label mb-2">HTML, CSS e JavaScript</span>
+                      <h4 class="card-title">Projeto Calculadora</h4>
+                      <p class="card-text">Projeto de calculadora funcional. A interface permite ao usuário realizar operações matemáticas básicas como adição, subtração, multiplicação e divisão. A lógica da calculadora utiliza a função eval() do JavaScript para processar a expressão matemática digitada.</p>
+                      <a href="https://projeto-calculadora-seven-xi.vercel.app/"  class="portfolio-btn btn btn-primary" target="_blank" rel="noopener">Acesse o projeto</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-md-4 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" alt="Projeto 6" src="assets/Quiz.png">
+                    <div class="card-body">
+                      <span class="portfolio-label tech-label mb-2">HTML, CSS e JavaScript</span>
+                      <h4 class="card-title">Quiz</h4>
+                      <p class="card-text">Quiz com cinco perguntas referente a tecnologia.</p>
+                      <a href="https://quiz-com-cinco-perguntas.vercel.app/" class="portfolio-btn btn btn-primary" target="_blank" rel="noopener">Acesse o projeto</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-    <div class="portfolio-card">
-      <div class="portfolio-card-content">
-        <span class="portfolio-label">HTML, CSS e JavaScript</span>
-        <h3 class="portfolio-project-title">Site SVO - Fundação Parreiras Horta</h3>
-        <p class="portfolio-desc">
-          Projeto desenvolvido para o Serviço de Verificação de Óbito (SVO). Página responsiva e intuitiva para o profissional e usuário.
-        </p>
-        <a href="https://github.com/UNIT-Residencia-1-Squad-10/SVO.git" class="portfolio-btn" target="_blank" rel="noopener">Acesse agora &gt;</a>
+            <!-- Próximo slide -->
+            <div class="carousel-item">
+              <div class="row">
+                <!-- Card 7 -->
+                <div class="col-md-4 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" alt="Projeto 4" src="assets/jogodamemoria.png">
+                    <div class="card-body">
+                      <span class="portfolio-label tech-label mb-2">HTML, CSS e JavaScript</span>
+                      <h4 class="card-title">Jogo da memória</h4>
+                      <p class="card-text">Um jogo da memória simples, divertido e interativo. Encontre os 3 pares de cartas e desafie sua memória!</p>
+                      <a href="https://jogodamemoria-sable.vercel.app/" class="portfolio-btn btn btn-primary" target="_blank" rel="noopener">Acesse o projeto</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="col-md-4 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" alt="Projeto 5" src="assets/jogo oculto.png">
+                    <div class="card-body">
+                      <span class="portfolio-label tech-label mb-2">HTML, CSS e JavaScript</span>
+                      <h4 class="card-title">Jogo oculto</h4>
+                      <p class="card-text">Um jogador escolhe e oculta um número. O segundo jogador tem até 5 tentativas para adivinhar.  
+O jogo informa se o palpite foi maior ou menor que o número oculto.  
+Se acertar, uma mensagem de parabéns é exibida. Caso erre todas as tentativas, o jogo termina.</p>
+                      <a href="https://projeto-1-jogo-numero-oculto.vercel.app/"  class="portfolio-btn btn btn-primary" target="_blank" rel="noopener">Acesse o projeto</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 9 -->
+                <div class="col-md-4 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" alt="Projeto 5" src="assets/karban.png">
+                    <div class="card-body">
+                      <span class="portfolio-label tech-label mb-2">HTML, CSS e JavaScript</span>
+                      <h4 class="card-title">Lista de tarefas (KANBAN)</h4>
+                      <p class="card-text">Permite adicionar tarefas na coluna "Em aberto", mover os cards entre as colunas (Bid, Em andamento, Entregue) e remover tarefas.  
+As cores dos cards mudam conforme a coluna. Interface prática para organização e gerenciamento de tarefas.</p>
+                      <a href="https://projeto-4-kanban.vercel.app/"  class="portfolio-btn btn btn-primary" target="_blank" rel="noopener">Acesse o projeto</a>
+                    </div>
+                  </div>
+                </div>
+                
+
+
+
+            
+          </div>
+        </div>
       </div>
-      <img src="assets/svo.png" alt="Site SVO" class="portfolio-img">
     </div>
-
-    <div class="portfolio-card">
-      <div class="portfolio-card-content">
-        <span class="portfolio-label">C# e .NET</span>
-        <h3 class="portfolio-project-title">API de registro de clientes</h3>
-        <p class="portfolio-desc">
-          Criação de uma API de registro de clientes, produtos e utilizando métodos GET, POST, DELETE e UPDATE com Entity Framework.
-        </p>
-        <a href="https://github.com/vitoriaunit/ProductClientHub.git" class="portfolio-btn" target="_blank" rel="noopener">Acesse agora &gt;</a>
-      </div>
-      <img src="assets/API.png" alt="API de clientes" class="portfolio-img">
-    </div>
-
   </div>
 </section>
+
+
+
+<script>
+  // Carrossel horizontal simples: rola 3 cards por clique
+  const slider = document.getElementById('portfolioSlider');
+  const prevBtn = document.getElementById('carouselPrev');
+  const nextBtn = document.getElementById('carouselNext');
+  const cardWidth = 260 + 24; // largura do card + gap
+  prevBtn.onclick = () => {
+    slider.scrollBy({ left: -cardWidth * 4, behavior: 'smooth' });
+  };
+  nextBtn.onclick = () => {
+    slider.scrollBy({ left: cardWidth * 4, behavior: 'smooth' });
+  };
+</script>
 
 <!--Skills-->
 <section id="skills" class="skills-section">
@@ -198,36 +370,63 @@
   </div>
 </section>
 
-<!--Contato-->
+<!--FOOTER-->
 <section id="footer" class="contact-section">
-  <h2 class="contact-title">CONTATO</h2>
-  <div class="contact-content">
-    <div class="contact-map-card">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126548.89893759547!2d-37.138569!3d-10.947246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab3b6b1e0b2a1%3A0x8e7b6e8b1e0b2a1!2sAracaju%2C%20SE!5e0!3m2!1spt-BR!2sbr!4v1685645645645!5m2!1spt-BR!2sbr"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Mapa Aracaju"
-      ></iframe>
+<section class="py-5 contact-purple-bg">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-2 mb-lg-4">
+            <div class="col-lg-8 col-xxl-7">
+                
+                <h2 class="display-5 fw-bold mb-3">Contato</h2>
+                <p class="lead mb-0">Entre em contato comigo para mais informações.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-6">
+                <form action="https://formspree.io/f/xjkrbrwd" method="POST">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <input class="form-control bg-light" name="nome" placeholder="Insira seu nome" type="text" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <input class="form-control bg-light" name="email" placeholder="Insira seu email" type="email" required>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <textarea class="form-control bg-light" name="mensagem" placeholder="Envie sua mensagem" rows="4" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-grid">
+                                <button class="btn btn-primary" type="submit">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <form class="contact-form-card">
-      <label for="nome">Nome</label>
-      <input type="text" id="nome" name="nome" placeholder="Insira seu nome" required>
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Insira seu email" required>
-      <label for="mensagem">Mensagem</label>
-      <textarea id="mensagem" name="mensagem" rows="5" placeholder="Envie sua mensagem" required></textarea>
-      <button type="submit" class="contact-btn">Enviar</button>
-    </form>
-  </div>
+    <!-- Mapa do Google Maps de Aracaju, Sergipe -->
+    <div class="mt-5">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126548.89893759547!2d-37.138569!3d-10.947246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab3b6b1e0b2a1%3A0x8e7b6e8b1e0b2a1!2sAracaju%2C%20SE!5e0!3m2!1spt-BR!2sbr!4v1685645645645!5m2!1spt-BR!2sbr"
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa Aracaju"></iframe>
+    </div>
 </section>
 
-<footer class="site-footer">
-  Vitória Maíra Evangelista Ribeiro © 2025. Todos os direitos reservados
+<footer>
+  Vitória Maíra Evangelista Ribeiro © 2025. Todos os direitos reservados 
 </footer>
 
 <!--script-->
   <script src="scripts/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
+
 </html>

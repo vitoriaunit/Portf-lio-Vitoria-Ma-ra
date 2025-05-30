@@ -1,172 +1,18 @@
-/* Fundo da página */
-body {
+footer {
+  background-color: #000; /* Mesma cor da navbar preta */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.contact-purple-bg {
   background: #4A3252;
-  margin: 0;
-  padding: 0;
-}
-
-/* Título e subtítulo */
-.contact-title {
   color: #fff;
-  font-family: "Squada One", sans-serif;
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-align: center;
-  margin: 40px 0 8px 0;
-  letter-spacing: 1px;
 }
-
-.contact-subtitle {
-  color: #fff;
-  font-family: "Squada One", sans-serif;
-  font-size: 1rem;
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-/* Container dos cards */
-.contact-content {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 60px;
-  max-width: 1100px;
-  margin: 0 auto 40px auto;
-  flex-wrap: nowrap;
-}
-
-/* Card do mapa */
-.contact-map-card {
+.contact-purple-bg .form-control {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(74, 50, 82, 0.10);
-  padding: 0;
-  width: 380px;
-  min-width: 260px;
-  max-width: 420px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
+  color: #000;
 }
-
-.contact-map-card iframe {
-  width: 100%;
-  height: 320px;
-  border: none;
-  border-radius: 10px;
-  display: block;
-}
-
-/* Card do formulário */
-.contact-form-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(74, 50, 82, 0.10);
-  padding: 32px 24px 24px 24px;
-  width: 380px;
-  min-width: 260px;
-  max-width: 420px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  box-sizing: border-box;
-}
-
-.contact-form-card label {
-  color: #4A3252;
-  font-family: "Squada One", sans-serif;
-  font-size: 1.05rem;
-  margin-bottom: 4px;
-  margin-top: 16px;
-  font-weight: bold;
-  text-align: left;
-}
-
-.contact-form-card input,
-.contact-form-card textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 6px;
-  border: 1.5px solid #e0d7ef;
-  font-family: "Squada One", sans-serif;
-  font-size: 1rem;
-  margin-bottom: 16px;
-  background: #f8f6fa;
-  color: #222;
-  resize: none;
-  box-sizing: border-box;
-  transition: border 0.2s;
-}
-
-.contact-form-card input:focus,
-.contact-form-card textarea:focus {
-  border: 1.5px solid #a259e6;
-  background: #fff;
-  outline: none;
-}
-
-.contact-form-card textarea {
-  min-height: 100px;
-  max-height: 200px;
-}
-
-/* Botão do formulário */
-.contact-btn {
-  background: #179acb;
-  color: #fff;
-  font-family: "Squada One", sans-serif;
-  font-size: 1rem;
-  padding: 10px 36px;
-  border-radius: 20px;
-  border: none;
-  margin: 18px auto 0 auto;
-  transition: background 0.2s, color 0.2s;
-  font-weight: bold;
-  cursor: pointer;
-  align-self: center;
-  width: auto;
-  display: inline-block;
-}
-
-.contact-btn:hover {
-  background: #FFB800;
-  color: #4A3252;
-}
-
-/* Responsivo para telas pequenas */
-@media (max-width: 950px) {
-  .contact-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-    max-width: 98vw;
-  }
-  .contact-map-card,
-  .contact-form-card {
-    width: 98vw;
-    max-width: 420px;
-    min-width: unset;
-  }
-  .contact-map-card iframe {
-    height: 220px;
-  }
-}
-
-/* Footer preto */
-.site-footer {
-  background: #000;
-  color: #fff;
-  text-align: center;
-  font-family: "Squada One", sans-serif;
-  font-size: 1rem;
-  padding: 18px 0 14px 0;
-  margin: 0;
-  letter-spacing: 0.5px;
-  border-radius: 0;
-  width: 100%;
-  box-sizing: border-box;
-  position: relative;
-  left: 0;
-  bottom: 0;
+.contact-purple-bg .form-control::placeholder {
+  color: #888;
 }

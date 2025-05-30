@@ -29,20 +29,3 @@ document.querySelectorAll('.skill-card').forEach(card => {
   // Remova o evento mouseleave para manter preenchido!
 });
 
-// Animação moderna de fade-in nos cards do portfólio ao aparecer na tela
-const portfolioCards = document.querySelectorAll('.portfolio-card');
-
-const observer = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      obs.unobserve(entry.target); // anima só uma vez
-    }
-  });
-}, {
-  threshold: 0.15
-});
-
-portfolioCards.forEach(card => {
-  observer.observe(card);
-});

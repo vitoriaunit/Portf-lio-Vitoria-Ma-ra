@@ -1,165 +1,136 @@
-/* PORTFÓLIO CARDS MODERNOS */
-/* Adicione em portfolio.css ou extends.css */
-
 .portfolio-section {
-  background: #4A3252;           /* Cor de fundo roxa */
-  padding: 48px 0 64px 0;        /* Espaçamento superior e inferior */
-  text-align: center;            /* Centraliza o texto */
+  background: #4A3252 !important;
 }
-
-/* Título "Portfólio": estiliza o título principal da seção */
-.portfolio-title {
-  color: #fff;                   /* Cor branca */
-  font-family: "Squada One", sans-serif; /* Fonte personalizada */
-  font-size: 2.2rem;             /* Tamanho grande */
-  margin-bottom: 32px;           /* Espaço abaixo do título */
-  font-weight: bold;             /* Negrito */
+.card {
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
-
-.portfolio-grid {
+.carousel-inner .row {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;         /* Não quebra linha, mantém enfileirado */
-  justify-content: center;
-  align-items: stretch;
-  gap: 40px;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 16px;
-  overflow-x: auto;          /* Permite rolar horizontalmente em telas pequenas */
-  overflow-y: visible; /* Permite que o card cresça para fora na vertical */
+  flex-wrap: nowrap;
+  align-items: stretch; /* Faz todos os cards terem a mesma altura */
+  background: transparent !important; /* Garante fundo igual */
 }
-
-.portfolio-card {
-  width: 100%;
-  max-width: 340px;
-  min-width: 260px;
-  margin: 0;
-  align-items: center;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.7s cubic-bezier(.77,0,.18,1), transform 0.7s cubic-bezier(.77,0,.18,1), box-shadow 0.3s, scale 0.3s;
-  box-shadow: 0 4px 24px rgba(74, 50, 82, 0.10);
-  border-radius: 18px;
-  background: #fff;
-  padding: 32px 24px;
+.carousel-inner .col-md-4 {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  overflow: hidden;
-  min-height: 340px;
 }
-
-.portfolio-card.visible {
-  opacity: 1;
-  transform: translateY(0);
+.card,
+.portfolio-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff; /* Fundo branco igual para todos os cards */
 }
-
-.portfolio-card:hover {
-  box-shadow: 0 8px 32px rgba(74, 50, 82, 0.18);
-  transform: translateY(-8px) scale(1.025);
-  z-index: 2;
+.card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
-
+.card img,
+.portfolio-card img,
 .portfolio-img {
   width: 100%;
-  max-width: 340px;
-  height: 180px;
-  border-radius: 12px;
-  object-fit: cover;
-  margin: 0 0 18px 0;
-  align-self: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  transition: filter 0.3s;
+  height: 260px;
+  min-height: 260px;
+  max-height: 260px;
+  object-fit: contain; /* Não corta a imagem */
+  object-position: center;
+  background: #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  display: block;
 }
-
-.portfolio-card:hover .portfolio-img {
-  filter: brightness(0.95) saturate(1.1);
+@media (max-width: 768px) {
+  .carousel-inner .row {
+    flex-wrap: wrap; /* Permite quebra de linha dos cards */
+  }
+  .carousel-inner .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
 }
-
-.portfolio-label {
-  background: #a259e6;
+.portfolio-title {
+  font-family: var(--bs-font-sans-serif, 'Roboto', 'Open Sans', Arial, sans-serif); /* igual Bootstrap */
+  font-size: 2.5rem;
+  font-weight: 700;
   color: #fff;
-  font-size: 0.85rem;
-  font-family: 'Poppins', sans-serif;
-  padding: 4px 12px;
-  border-radius: 16px;
-  margin-bottom: 10px;
-  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
   letter-spacing: 1px;
 }
-
-.portfolio-project-title {
-  font-size: 1.15rem;
-  font-family: 'Poppins', sans-serif;
-  color: #4A3252;
-  margin: 0 0 8px 0;
-  font-weight: 700;
-}
-
-.portfolio-desc {
-  color: #333;
-  font-size: 1rem;
-  margin-bottom: 16px;
-  font-family: 'Poppins', sans-serif;
-  text-align: left;
+.portfolio-label {
+  display: inline-block;
+  background: #fff;
+  color: #1780ad;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.4em 1.4em;
+  border-radius: 2em;
+  margin-bottom: 1em;
+  letter-spacing: 1px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: none;
 }
 
 .portfolio-btn {
-  background: #0099cc;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
-  padding: 8px 18px;
-  border-radius: 8px;
-  text-decoration: none;
   margin-top: auto;
-  transition: background 0.2s, color 0.2s;
-  font-weight: 700;
+  align-self: flex-start;
+  background: #70a5bc !important; /* Apenas muda a cor de fundo */
+  color: #fff !important;
+  font-weight: bold;
+  border-radius: 2em;
+  padding: 0.4em 1.4em;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s;
   border: none;
-  cursor: pointer;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
-
 .portfolio-btn:hover {
-  background: #FFB800;
-  color: #4A3252;
+  background: #125e7c !important;
+  color: #fff !important;
+}
+.tech-label {
+  background: #125e7c !important;
+  color: #fff !important;
+  font-size: 1rem !important;
+  padding: 0.2em 1em !important;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+  border-radius: 2em;
+  margin-bottom: 0.7em;
+  letter-spacing: 1px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: none;
+  display: inline-block;
 }
 
-@media (max-width: 1100px) {
-  .portfolio-grid {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: visible; /* Adicione aqui também */
-    gap: 32px;
-  }
-  .portfolio-card {
-    min-width: 280px;
-    max-width: 320px;
-    padding: 24px 8px;
-  }
+/* Botões do carrossel customizados */
+.btn.btn-primary.position-absolute.top-50.start-0,
+.btn.btn-primary.position-absolute.top-50.end-0 {
+  background: #70a5bc !important;
+  border: none !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s;
+}
+.btn.btn-primary.position-absolute.top-50.start-0:hover,
+.btn.btn-primary.position-absolute.top-50.end-0:hover {
+  background: #125e7c !important;
+  color: #fff !important;
 }
 
-@media (max-width: 900px) {
-  .portfolio-grid {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: visible; /* Adicione aqui também */
-    gap: 24px;
-  }
-  .portfolio-card {
-    min-width: 260px;
-    max-width: 300px;
-    padding: 18px 4px;
-  }
+/* Botões do carrossel mais próximos dos cards */
+.btn.btn-primary.position-absolute.top-50.start-0 {
+  left: -60px !important;
 }
 
-@media (max-width: 600px) {
-  .portfolio-card {
-    max-width: 98vw;
-    padding: 16px 4px;
-  }
+.btn.btn-primary.position-absolute.top-50.end-0 {
+  right: -60px !important;
 }
-
